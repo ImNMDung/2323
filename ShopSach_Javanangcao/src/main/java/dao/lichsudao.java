@@ -31,7 +31,7 @@ public class lichsudao {
 				int gia = rs.getInt("gia");
 				int thanhtien = rs.getInt("thanhtien");
 				Date ngaymua = rs.getDate("NgayMua");
-				boolean damua = rs.getBoolean("damua");
+				int damua = rs.getInt("damua");
 				ds.add(new lichsubean(makh,tensach,soluongmua,gia,thanhtien,ngaymua,damua));
 			}
 			//b4 đóng kết nối

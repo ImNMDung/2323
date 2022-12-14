@@ -3,6 +3,7 @@ package bo;
 import java.util.ArrayList;
 
 import bean.giohangbean;
+import dao.hoadondao;
 
 public class giohangbo {
     public ArrayList<giohangbean> ds
@@ -48,5 +49,6 @@ public void xoachon(String masach) {
     				return;
     			}
     }
-   
+	
+
 }

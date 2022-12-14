@@ -12,4 +12,15 @@ public class loaibo {
 	   ds=ldao.getloai();
 	   return ds;
    }
+   
+   
+   public int  ThemLoai(String maloai ,String tenloai) {
+		return ldao.ThemLoai(maloai,tenloai);		
+	}
+	public int XoaLoai(String maloai) {
+		return ldao.XoaLoai(maloai);		
+	}
+	public int SuaLoai(String maloai ,String tenloai) {
+		return ldao.SuaLoai(maloai,tenloai );		
+	}
 }

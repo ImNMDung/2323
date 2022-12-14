@@ -17,9 +17,10 @@ public class hoadondao {
 				PreparedStatement cmd= kn.cn.prepareStatement(sql);
 				ResultSet rs=cmd.executeQuery();
 				long max=0;
-				if(rs.next()) 
-					max=rs.getLong("maxhd");
-				rs.close(); kn.cn.close();
+					if(rs.next()) 
+						max=rs.getLong("maxhd");
+				rs.close(); 
+				kn.cn.close();
 				return max;
 			} catch (Exception e) {
 				e.printStackTrace();return 0;
@@ -62,6 +63,33 @@ public class hoadondao {
 		}
 	}
 	
+	public void xacnhandamua(long maHD) {
+		try {
+			ketnoi kn= new ketnoi();
+			kn.ketnoi();
+			String sql="UPDATE hoadon SET damua = 3 WHERE MaHoaDon = ?";
+			PreparedStatement cmd= kn.cn.prepareStatement(sql);
+			cmd.setLong(1, maHD);
+			cmd.executeUpdate();
+			kn.cn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void xacnhandamuaadm(String makh) {
+		try {
+			ketnoi kn= new ketnoi();
+			kn.ketnoi();
+			String sql="UPDATE hoadon SET damua = 2 WHERE makh = ?";
+			PreparedStatement cmd= kn.cn.prepareStatement(sql);
+			cmd.setString(1, makh);
+			cmd.executeUpdate();
+			kn.cn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	public static void main(String[] args) {
 	   hoadondao hd= new hoadondao();
 	   System.out.println(hd.getmaxhd());

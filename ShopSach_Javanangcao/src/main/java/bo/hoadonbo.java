@@ -15,4 +15,8 @@ public class hoadonbo {
 	public void capnhat(long maxhd) {
 		hdao.capnhatdamua(maxhd);
 	}
+	
+	public void xacnhan(long maxhd) {
+		hdao.xacnhandamua(maxhd);
+	}
 }

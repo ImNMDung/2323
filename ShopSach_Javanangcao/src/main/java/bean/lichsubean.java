@@ -9,19 +9,19 @@ public class lichsubean {
    private int gia;
    private int thanhtien;
    private Date ngaymua;
-   private boolean damua;
+   private int damua;
 public lichsubean() {
 	super();
 	// TODO Auto-generated constructor stub
 }
 public lichsubean(String makh, String tensach,int soluongmua, int gia, int thanhtien, Date ngaymua,
-		boolean damua) {
+		int damua) {
 	super();
 	this.makh = makh;
 	this.tensach = tensach;
 	this.soluongmua = soluongmua;
 	this.gia = gia;
-	this.thanhtien = thanhtien;
+	this.thanhtien = thanhtien;	
 	this.ngaymua = ngaymua;
 	this.damua = damua;
 }
@@ -61,10 +61,10 @@ public Date getNgaymua() {
 public void setNgaymua(Date ngaymua) {
 	this.ngaymua = ngaymua;
 }
-public boolean isDamua() {
+public int isDamua() {
 	return damua;
 }
-public void setDamua(boolean damua) {
+public void setDamua(int damua) {
 	this.damua = damua;
 }
 

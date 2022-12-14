@@ -100,9 +100,9 @@
     </table>
 <table>
 	<h3><span class="label label-info">Tổng tiền: <%=tongtien %> VND</span></h3>
-	<form action="thanhtoanctl" method="get">
+	<form action="damuactl" method="get">
     
-    	<input class="btn-primary" name ="" type="submit" value="Mua Liền">
+    	<input class="btn-primary" name ="mualien" type="submit" value="Mua Liền">
     	
     	</form>
     	<form action="giohangctl" method="get">

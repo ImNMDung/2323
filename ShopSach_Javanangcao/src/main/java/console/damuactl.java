@@ -37,7 +37,10 @@ public class damuactl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		// phải đăng nhập 
-		
+		 String datmua=request.getParameter("abc");	
+		 String mualien=request.getParameter("mualien");	
+		 
+		 String xacnhan=request.getParameter("xacnhan");
 	// tạo httpss lấy ss đăng nhập   
 		// lấy phần tử trong giỏ hàng lưu trong gio hàng bo ss. "gio"
 		HttpSession session=request.getSession();
@@ -56,7 +59,12 @@ public class damuactl extends HttpServlet {
 				//System.out.println(g.getMasach() +"  abc");
 				ctbo.Them(g.getMasach().trim(), g.getSoluong(),maxhd);
 			}
-			hdbo.capnhat(maxhd);
+			if (datmua != null) 
+			{	}
+			else {
+			hdbo.capnhat(maxhd);}
+		
+			
 			session.removeAttribute("gio");
 			RequestDispatcher rd= request.getRequestDispatcher("lichsumuahang");
 			rd.forward(request, response);

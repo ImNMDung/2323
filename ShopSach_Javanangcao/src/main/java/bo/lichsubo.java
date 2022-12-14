@@ -12,6 +12,8 @@ public class lichsubo {
 	ArrayList<lichsubean> ls;
 	public ArrayList<lichsubean> getlichsu(int makhDangNhap){
 		ls=lsdao.getlichsu(makhDangNhap);
+		
+		
 		return ls;
 	}
 

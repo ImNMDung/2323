@@ -102,7 +102,7 @@
        		<td>   <%=h.getTensach() %></td>
        		
        		<td>	   <%=h.getGia() %></td>
-       		<td> <input class="form-control"  name ="txtsl" type="number" min="0" width="25" value="0"> </td>
+       		<td width="80px"> <input class="form-control"  name ="txtsl" type="number" min="0" width="25" value="<%=h.getSoluong()%>"> </td>
        		<td><%=h.getThanhtien() %></td>
        		
        		<td> 

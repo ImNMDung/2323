@@ -1,7 +1,7 @@
 package bo;
 
-import dao.UserDao;
 import bean.UserBean;
+import dao.UserDao;
 
 public class UsersBo {
 

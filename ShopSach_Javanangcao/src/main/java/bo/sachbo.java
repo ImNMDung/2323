@@ -31,5 +31,14 @@ public ArrayList<sachbean> TimMa(String maloai){
 				tam.add(s);
 		return tam;
 	}
-
+	public int  ThemSach(String masach ,String tensach ,String soluong ,String gia,String anh, String tacgia) {
+		return sdao.ThemSach(masach,tensach,soluong,gia,anh,tacgia);		
+	}
+	public int XoaSach(String masach) {
+		return sdao.XoaSach(masach);		
+	}
+	public int SuaSach(String masach ,String tensach ,String soluong ,String gia,String anh, String tacgia) {
+		return sdao.SuaSach(masach,tensach,soluong,gia,anh,tacgia);		
+	}
+	
 }

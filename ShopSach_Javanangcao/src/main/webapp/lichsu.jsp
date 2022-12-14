@@ -49,7 +49,7 @@
 				UserBean kh = (UserBean) session.getAttribute("kh");
 				if (kh != null) {
 					%>
-					<li><a href="ktdn"> <span
+					<li><a href=""> <span
 							class="glyphicon glyphicon-user"></span> Xin chào: <%=kh.getHoten()	%>
 					</a></li>
 					<li><a href="logoutcsl"> <span
@@ -77,6 +77,7 @@
 	 <th scope="col">Giá tiền</th>
 	 <th scope="col">Thành tiền</th>
 	 	 <th scope="col">Trạng thái</th>
+	 
       <%
       ArrayList<lichsubean> dsls = (ArrayList<lichsubean>) request.getAttribute("dsls");
 		if (dsls != null) {
@@ -92,19 +93,21 @@
 			<td><%=s.getSoluongmua()%></td>
 			<td><%=s.getGia()%></td>
 			<td><%=s.getThanhtien()%></td>
-			<%if(s.isDamua() == true) {%>
-				<td class="text-success">Đã hoàn tất</td>
-			<%}else { %>
-				<td class="text-danger">Chưa hoàn tất</td>
-			<%} %>
+			<%if(s.isDamua() == 0) {%>
+				<td class="text-info">Đã Đặt Mua</td>
+			<%}%>
+				
+				<%if(s.isDamua() == 1) {%>
+				<td class="text-success">Đã Thanh Toán</td>
+			<%}%>
+			<%if(s.isDamua() == 2) {%>
+				<td class="text-danger">Đã Xác Nhận Đơn </td>
+			<%}%>
+		 
 		</tr>
-		<%
-		}
-		%>
-
-		<%
-		}
-		%>
+	<%}} %>
+	
+	
     </table>
    </td>
   </tr>
